@@ -3,5 +3,6 @@ module.exports = {
     'postcss-import': {},
     'postcss-cssnext': {},
     'postcss-simple-vars': {},
+    'postcss-nested': {}
   }
 }
