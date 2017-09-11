@@ -9,9 +9,12 @@ export default class Loading extends React.Component {
           </div>
           <div className="spinner__elem spinner__elem--second">
           </div>
-          <div className="spinner__text">
-            Loading...
+          <div className="spinner__circle">
+            <div className="spinner__text">
+              Loading...
+            </div>
           </div>
+
 
       </div>
     );
