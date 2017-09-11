@@ -1,12 +1,3 @@
-.spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  transform: translateX(-50%) translateY(-100%);
-}
-
 @keyframes rotate-cw {
   0% {
     transform: rotate(0deg);
@@ -55,36 +46,55 @@
   }
 }
 
-.spinner__elem {
+.spinner {
   position: absolute;
-  width: 50px;
+  top: 50%;
+  left: 50%;
+  width: 100px;
   height: 50px;
-  background-color: transparent;
-  animation: rotate-cw 5s linear infinite;
-  border-radius: 0;
-  background-color: $bg;
-  outline: 10px solid $bg;
+  transform: translateX(-50%) translateY(-100%);
 
-  &--second {
+  &__elem {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    animation: rotate-cw 5s linear infinite;
     border-radius: 50%;
-    outline: 10px solid $bg;
-    animation: rotate-ccw 5s linear infinite;
-    background-color: red;
+    border: 5px solid $bg;
+
+    &--second {
+      border: 5px solid $bg;
+      animation: rotate-ccw 5s linear infinite;
+    }
   }
 
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $red;
+    transform: translateX(-40%) translateY(-40%);
+  }
+
+  &__text {
+    position: absolute;
+    text-align: center;
+    padding: 2px 0;
+    padding-left: 2px;
+    border-radius: 5px;
+    width: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-transform: lowercase;
+    background: $bg;
+  }
 }
 
-.spinner__text {
-  position: absolute;
-  text-align: center;
-  padding: 2px 0;
-  padding-left: 4px;
-  border-radius: 5px;
-  width: 100px;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-transform: lowercase;
-  background: $bg;
-  animation: penis 3s infinite;
-}
+
+
+
