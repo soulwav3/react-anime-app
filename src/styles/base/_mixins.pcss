@@ -1,0 +1,19 @@
+@define-mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@define-mixin atSmall {
+  @media (max-width: 530px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atMedium {
+  @media (max-width: 800px) {
+    @mixin-content;
+  }
+}

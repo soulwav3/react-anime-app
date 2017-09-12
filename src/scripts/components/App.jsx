@@ -1,5 +1,6 @@
 import React from 'react';
 import Loading from './Loading.jsx';
+import Card from './Card.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -70,6 +71,6 @@ export default class App extends React.Component {
     if (Object.keys(this.state).length === 0 || this.state.error === 404) {
       return <Loading />
     }
-    return <img src={this.state.image} alt={this.state.title}/>
+    return <Card data={this.state} reload={this.fetchApi.bind(this)}/>
   }
 }

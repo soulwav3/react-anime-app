@@ -1,0 +1,74 @@
+.anime {
+  background-color: $bg;
+  &__poster {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info-wrap {  }
+
+  &__title, &__japtitle {
+    text-align: center;
+    text-shadow: 0 3px 1px $darkred;
+
+  }
+
+  &__title {
+    font-family: Raleway Black;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  &__japtitle {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  &__info-items {
+    text-align: center;
+  }
+
+  &__info-item {
+    padding: 10px 0;
+    box-shadow: 0 2px 2px -2px black;
+    margin-bottom: 10px;
+
+    &-title {
+      display: block;
+      margin-bottom: 5px;
+      font-family: Raleway Bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &-data {
+      display: block;
+      font-family: Raleway Light;
+    }
+
+  }
+
+  &__reload-btn {
+    width: 100%;
+    font-family: Raleway Black;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding: 15px 0;
+    color: $bg;
+    text-transform: uppercase;
+    border: none;
+
+    &::active {
+      box-shadow: inset 0 4px 10px -3px black;
+    }
+  }
+
+  &__synopsis {
+    padding: 0 18px;
+  }
+
+}
