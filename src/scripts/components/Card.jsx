@@ -31,7 +31,7 @@ export default class Card extends React.Component {
               
               <span className="anime__info-item-data">{data.epLength} min</span>
             </div>
-            <div className="anime__info-item">
+            <div className="anime__info-item anime__info-item--last">
               <span className="anime__info-item-title">Status</span>
               <span className="anime__info-item-data">{data.status}</span>
             </div>

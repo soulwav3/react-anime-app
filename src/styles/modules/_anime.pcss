@@ -1,4 +1,28 @@
+.col-left {
+  display: table;
+  margin: 0 auto;
+
+  @mixin atMedium {
+    display: block;
+  }
+}
+
+.col-right {
+  @mixin atMedium {
+    width: 100%;
+  }
+}
+
 .anime {
+
+  @mixin atMedium {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+  }
+
   background-color: $bg;
   &__poster {
     img {
@@ -13,7 +37,9 @@
   &__title, &__japtitle {
     text-align: center;
     text-shadow: 0 3px 1px $darkred;
-
+    @mixin atMedium {
+      margin-top: 0;
+    }
   }
 
   &__title {
@@ -24,7 +50,6 @@
 
   &__japtitle {
     font-size: 18px;
-    margin-top: 10px;
     margin-bottom: 12px;
   }
 
@@ -36,6 +61,23 @@
     padding: 10px 0;
     box-shadow: 0 2px 2px -2px black;
     margin-bottom: 10px;
+
+    @mixin atMedium {
+      display: inline-block;
+      padding: 0 10px;
+      box-shadow: none;
+      border-right: 2px solid rgba(0,0,0, 0.3);
+      & ::last-child {
+        border-right: none;
+      }
+
+    &--last {
+      @mixin atMedium {
+        border-right: none;
+      }
+    }
+
+    }
 
     &-title {
       display: block;
