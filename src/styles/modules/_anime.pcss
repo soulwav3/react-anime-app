@@ -50,9 +50,16 @@
     }
   }
 
+  &__title-wrap {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-color: buttonface;
+  }
+
   &__title, &__japtitle {
     text-align: center;
-    text-shadow: 0 3px 1px $darkred;
+    /* text-shadow: 0 2px 1px $darkred; */
+    color: $bg;
     @mixin atMedium {
       margin-top: 0;
     }
@@ -125,8 +132,8 @@
       bottom: 0;
     }
 
-    &::active {
-      box-shadow: inset 0 4px 10px -3px black;
+    &:focus {
+      box-shadow: inset 0 4px 20px -8px black;
     }
   }
 
