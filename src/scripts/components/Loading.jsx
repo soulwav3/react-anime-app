@@ -10,8 +10,10 @@ export default class Loading extends React.Component {
           <div className="spinner__elem spinner__elem--second">
           </div>
           <div className="spinner__circle">
-            <div className="spinner__text">
-              Loading...
+            <div className="spinner__dots">
+              <span className="spinner__dot"></span>
+              <span className="spinner__dot spinner__dot--second"></span>
+              <span className="spinner__dot spinner__dot--third"></span>
             </div>
           </div>
 

@@ -30,17 +30,13 @@
   }
 }
 
-@keyframes scale {
+@keyframes opacity {
   0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.25);
+    opacity: 1;
   }
 
   100% {
-    transform: scale(1);
+    opacity: 0;
   }
 }
 
@@ -79,8 +75,10 @@
     transform: translateX(-50%) translateY(-50%);
   }
 
-  &__text {
+  &__dots {
     position: absolute;
+/*     width: 200px;
+    height: 50px; */
     text-align: center;
     padding: 2px 0;
     padding-left: 2px;
@@ -91,6 +89,31 @@
     transform: translateX(-50%) translateY(-50%);
     text-transform: lowercase;
     background: $bg;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: $font;
+    border-radius: 50%;
+    margin-bottom: 1px;
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+
+    &--second {
+      margin-left: 5px;
+      margin-right: 5px;
+      animation-delay: 1s;
+    }
+
+    &--third {
+      animation-delay: 2s;
+    }
   }
 }
 
