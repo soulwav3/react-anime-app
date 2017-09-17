@@ -1,0 +1,25 @@
+.main-header {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background: $bg;
+
+  &__heading, &__subheading {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+  }
+
+  &__subheading {
+    line-height: 16px;
+    a {
+      color: $red;
+      &:visited {
+        color: $darkred
+      }
+    }
+  }
+}
