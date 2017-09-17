@@ -4,6 +4,7 @@
 
   @mixin atMedium {
     display: block;
+    margin: 0;
   }
 }
 
@@ -17,21 +18,17 @@
   background-color: $bg;
 
   @mixin atMedium {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: stretch;
     justify-content: center;
-    box-shadow: 0 20px 50px -10px rgba(0,0,0, 0.6);
+    box-shadow: 0 10px 15px -2px rgba(0,0,0, 0.3);
   }
 
   @mixin atLarge {
     width: 900px;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     border-radius: 3px;
   }
 
@@ -58,7 +55,6 @@
 
   &__title, &__japtitle {
     text-align: center;
-    /* text-shadow: 0 2px 1px $darkred; */
     color: $bg;
     @mixin atMedium {
       margin-top: 0;
