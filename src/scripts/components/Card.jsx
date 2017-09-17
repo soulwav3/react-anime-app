@@ -11,8 +11,10 @@ export default class Card extends React.Component {
           <img src={data.image} alt={data.title}/>
         </div>
         <div className="anime__info-wrap col-right">
-          <h1 className="anime__title">{data.title}</h1>
-          <h2 className="anime__japtitle">{data.japtitle}</h2>
+          <div className="anime__title-wrap">
+            <h1 className="anime__title">{data.title}</h1>
+            <h2 className="anime__japtitle">{data.japtitle}</h2>
+          </div>
           <div className="anime__info-items">
             <div className="anime__info-item">
               <span className="anime__info-item-title">Year</span>
