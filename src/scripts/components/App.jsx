@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header.jsx';
 import Loading from './Loading.jsx';
 import Card from './Card.jsx';
 
@@ -69,8 +70,19 @@ export default class App extends React.Component {
 
   render() {
     if (Object.keys(this.state).length === 0 || this.state.error === 404) {
-      return <Loading />
+
+      return (
+        <div>
+          <Header />
+          <Loading />
+        </div>
+      );
     }
-    return <Card data={this.state} reload={this.fetchApi.bind(this)}/>
+    return (
+      <div>
+        <Header/>
+        <Card data={this.state} reload={this.fetchApi.bind(this)}/>
+      </div>
+    );
   }
 }
