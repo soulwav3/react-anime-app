@@ -4,11 +4,12 @@ export default class Card extends React.Component {
   render() {
     let data = this.props.data;
     let reload = this.props.reload;
+    let srcSetString = `${data.posterS} 500w, ${data.posterM} 800w`;
 
     return (
       <div className="anime wrapper">
         <div className="anime__poster col-left">
-          <img src={data.image} alt={data.title}/>
+          <img srcSet={srcSetString} alt={data.title} width="390"/>
         </div>
         <div className="anime__info-wrap col-right">
           <div className="anime__title-wrap">
