@@ -1,4 +1,5 @@
 import React from 'react';
+import ReloadButton from './ReloadButton.jsx';
 
 export default class Card extends React.Component {
   render() {
@@ -40,7 +41,7 @@ export default class Card extends React.Component {
             </div>
           </div>
           <p className="anime__synopsis">{data.synopsis}</p>
-          <button className="anime__reload-btn" onClick={reload}>Reload</button>
+          <ReloadButton reload={reload} />
         </div>
       </div>);
   }
