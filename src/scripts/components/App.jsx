@@ -35,7 +35,11 @@ export default class App extends React.Component {
         }
 
         if (data.episodeLength === null) {
-          data.episodeLength = 'N/A';
+          data.episodeLength = 'N/A' + ' min';
+        }
+
+        if (data.episodeLength !== null) {
+          data.episodeLength = data.episodeLength + ' min';
         }
 
         if (data.synopsis.length === 0) {
