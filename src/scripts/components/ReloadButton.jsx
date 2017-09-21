@@ -7,8 +7,10 @@ export default class ReloadButton extends React.Component {
 
     function enableAfter5S() {
       button.disabled = true;
+      button.classList.add('.anime__reload-btn--disabled');
       button.innerHTML = 'Wait';
       setTimeout(() => {
+        button.classList.remove('.anime__reload-btn--disabled');
         button.innerHTML = 'Reload';
         button.disabled = false;
       }, 5000);
