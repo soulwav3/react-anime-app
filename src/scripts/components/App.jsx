@@ -15,7 +15,6 @@ export default class App extends React.Component {
   fetchApi() {
 
     let ID = Math.floor(Math.random() * 13772) + 1;
-    console.log('id:', ID);
 
     const xhr = new XMLHttpRequest();
 
@@ -75,7 +74,6 @@ export default class App extends React.Component {
 
   render() {
     if (Object.keys(this.state).length === 0 || this.state.error === 404) {
-
       return (
         <div>
           <Header />
@@ -83,6 +81,7 @@ export default class App extends React.Component {
         </div>
       );
     }
+
     return (
       <div>
         <Header/>
